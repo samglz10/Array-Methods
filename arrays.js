@@ -122,11 +122,17 @@ groceryList[groceryList.length - 1] = "skirt steak"; // ["eggs", "avocado", butt
 
 /*
 How to add to start of an array?
+    Unshift
 How to add to end of an array?
+    Push
 How to remove from start of an array?
+    shift
 How to remove from end of an array?
+    pop
 How to get a certain piece of an array?
+    groceryList[1] 
 How to change an item in the array?
+    groceryList[1] = "avocado";
 */
 
 
@@ -138,6 +144,7 @@ console.log('initial todos', todos);
 
 // add "clean basement" to the end of the array
 // ['mow lawn', 'get groceries', 'relax', 'clean basement']
+todos.push('clean basement');
 
 // code here
 
@@ -147,6 +154,7 @@ console.log("added 'clean basement' to start", todos);
 // ['mow lawn', 'get drinks', 'relax','clean basement']
 
 // code here
+todos[1] = "get drinks";
 
 console.log("changed 'get groceries' to 'get drinks'", todos); // ['mow lawn', 'get drinks', 'relax', 'clean basement']
 
@@ -154,13 +162,16 @@ console.log("changed 'get groceries' to 'get drinks'", todos); // ['mow lawn', '
 // ['take out trash', 'mow lawn', 'get drinks', 'relax', 'clean basement']
 
 // code here
+todos.unshift('take out trash');
 
-console.log("added 'take out trash to the start'", todos)
+
+console.log("added take out trash to the start", todos)
 
 // add "do laundry" to the start of the array
 // ['do laundry', 'take out trash', 'mow lawn', 'get drinks', 'relax', 'clean basement']
 
 // code here
+todos.unshift('do laundry');
 
 console.log("added 'do laundry' to the start", todos); 
 
@@ -168,6 +179,7 @@ console.log("added 'do laundry' to the start", todos);
 // ['do laundry', 'take out trash and recyclables', 'mow lawn', 'get drinks', 'relax', 'clean basement']
 
 // code here
+todos[1] = 'take out trash and recyclables';
 
 console.log("changed 'take out trash' to 'take out trash and recyclables'", todos);
 
@@ -175,6 +187,7 @@ console.log("changed 'take out trash' to 'take out trash and recyclables'", todo
 // ['do laundry', 'take out trash and recyclables', 'mow lawn', 'get drinks', 'relax', 'go for a run']
 
 // code here
+todos[todos.length -1]='go for a run';
 
 console.log("changed the last item to 'go for a run'", todos);
 
@@ -182,6 +195,7 @@ console.log("changed the last item to 'go for a run'", todos);
 // ['home depot run', 'take out trash and recyclables', 'mow lawn', 'get drinks', 'relax', 'go for a run']
 
 // code here
+todos[0] ='home depot run';
 
 console.log("changed the first item to 'home depot run'", todos); 
 
@@ -190,13 +204,14 @@ console.log("changed the first item to 'home depot run'", todos);
 // ['take out trash and recyclables', 'mow lawn', 'get drinks', 'relax', 'go for a run']
 
 // code here
-
+todos.shift();
 console.log("removed first item", todos);
 
 // remove the last item
 // ['take out trash and recyclables', 'mow lawn', 'get drinks', 'relax']
 
 // code here
+todos.pop();
 
 console.log("removed last item", todos);
 
@@ -204,6 +219,7 @@ console.log("removed last item", todos);
 // ['take out trash and recyclables', 'mow lawn', 'get drinks', 'relax', 'a', 'b']
 
 // code here
+todos.push('a','b');
 
 console.log('added "a" and "b" to end of the list', todos)
 
@@ -212,12 +228,16 @@ console.log('added "a" and "b" to end of the list', todos)
 // ['mow lawn', 'get drinks', 'relax']
 
 // code here
+const slicedMethod = todos.slice(1,4);
 
-console.log('reassigned to be index 1 through index 3 inclusively', todos)
+
+
+console.log('reassigned to be index 1 through index 3 inclusively', slicedMethod);
 
 // BONUS: make everything capital using a loop
 // ['MOW LAWN', 'GET DRINKS', 'RELAX']
 
 // code here
 
-console.log('CAPITALIZED TODOS', todos)
+
+console.log('CAPITALIZED TODOS', slicedMethod.toUpperCase());
